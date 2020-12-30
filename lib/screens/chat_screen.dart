@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flash_chat_flutter/constants.dart';
-import 'package:firebase_auth/firebase_auth.dart' as auth;
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 final _firestore = FirebaseFirestore.instance;
-auth.User loggedInUser;
+User loggedInUser;
 
 class ChatScreen extends StatefulWidget {
   static const String id = 'chat_screen';
@@ -14,7 +14,7 @@ class ChatScreen extends StatefulWidget {
 
 class _ChatScreenState extends State<ChatScreen> {
   final messageTextController = TextEditingController();
-  final _auth = auth.FirebaseAuth.instance;
+  final _auth = FirebaseAuth.instance;
 
   String messageText;
 
